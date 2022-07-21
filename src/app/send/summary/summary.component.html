@@ -1,0 +1,31 @@
+<h4>Trnasaction Summary</h4>
+<div>
+    <app-details-display
+        title="You're sending"
+        [value]="params.toBePaid| currency: 'USD'"
+    ></app-details-display>
+    <app-details-display
+        title="Recipient gets"
+        [value]="params.amountToSend | currency: 'USD'"
+    ></app-details-display>
+    <app-details-display
+        title="Transfer time"
+        value="Within 24 hours"
+    ></app-details-display>
+    <hr>
+</div>
+<div>
+    <app-details-display
+        title="Recipient"
+        [value]="recipientName()"
+    ></app-details-display>
+    <app-details-display
+        title="Delivery method"
+        value="Bank Account"
+    ></app-details-display>
+    <app-details-display
+        title="Recipient Country"
+        [value]="secondFormGroup.get('country')?.value"
+    ></app-details-display>
+    <hr>
+</div>

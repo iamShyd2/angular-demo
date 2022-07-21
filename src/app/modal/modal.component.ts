@@ -14,17 +14,27 @@ export class Modal implements OnInit {
   constructor(public dialogRef: MatDialogRef<Modal>, private router: Router){}
   ngOnInit(): void {
     this.sendControl.valueChanges.subscribe(val => {
-      if(val != null) this.toBePaid = val;
+      if(val != null) this.toBePaid = (val * 1) + this.fees;
+      return val;
     })
   }
   
   sendControl = new FormControl(10);
   recipientControl = new FormControl(10);
   toBePaid = 10;
+  fees = 1;
 
   onSubmit(){
-    this.dialogRef.close();
-    this.router.navigate(["/send"]);
+    const {
+      toBePaid,
+      fees,
+      sendControl,
+    } = this;
+    this.dialogRef.close({
+      toBePaid,
+      fees,
+      amountToSend: sendControl.value,
+    });
   }
 
 

@@ -1,0 +1,27 @@
+<form [formGroup]="detailsFormGroup">
+    <h4 class="heading">{{ title }}</h4>
+    <p>This information must match a government issued document or your transfer might be delayed.</p>
+    <div class="row mt-5">
+        <div class="col-lg-6">
+            <app-input label="First name" [inputControl]="detailsFormGroup.get('firstName')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Last name" [inputControl]="detailsFormGroup.get('lastName')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Mobile number" [inputControl]="detailsFormGroup.get('phone')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-datepicker label="Date of Birth" [inputControl]="detailsFormGroup.get('dob')! | formcontrol"></app-datepicker>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Address" [inputControl]="detailsFormGroup.get('address')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Country" [inputControl]="detailsFormGroup.get('country')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Zip code" [inputControl]="detailsFormGroup.get('zip')! | formcontrol"></app-input>
+        </div>
+    </div>
+</form>

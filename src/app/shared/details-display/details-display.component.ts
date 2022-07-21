@@ -14,5 +14,5 @@ export class DetailsDisplayComponent implements OnInit {
 
 
   @Input() title!: string;
-  @Input() value!: string;
+  @Input() value!: string | null;
 }

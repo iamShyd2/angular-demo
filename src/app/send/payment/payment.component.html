@@ -1,0 +1,17 @@
+<form [formGroup]="thirdFormGroup">
+    <h4 class="headline">Pay with your Debit card</h4>
+    <div class="row">
+        <div class="col-lg-12">
+            <app-input label="Full Name" [formControl]="thirdFormGroup.get('firstName')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-12">
+            <app-input label="Card Number" [formControl]="thirdFormGroup.get('cardNumber')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="Expiry date" [formControl]="thirdFormGroup.get('expiry')! | formcontrol"></app-input>
+        </div>
+        <div class="col-lg-6">
+            <app-input label="CVV" [formControl]="thirdFormGroup.get('cvv')! | formcontrol"></app-input>
+        </div>
+    </div>
+</form>

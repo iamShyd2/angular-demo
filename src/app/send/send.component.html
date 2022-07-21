@@ -1,1 +1,35 @@
-<p>send works!</p>
+<div class="container page">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Personal</ng-template>
+      <app-details-form title="Personal details" [detailsFormGroup]="firstFormGroup"></app-details-form>
+      <div class="d-flex justify-content-end">
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Recipient</ng-template>
+      <app-details-form title="Recipient details" [detailsFormGroup]="secondFormGroup"></app-details-form>
+      <div class="d-flex justify-content-between">
+        <button mat-flat-button matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Review</ng-template>
+      <app-summary [secondFormGroup]="secondFormGroup"></app-summary>
+      <div class="d-flex justify-content-between">
+        <button mat-flat-button matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Payment</ng-template>
+      <app-payment [thirdFormGroup]="thirdFormGroup"></app-payment>
+      <div class="d-flex justify-content-between">
+        <button mat-flat-button matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary">Send</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
