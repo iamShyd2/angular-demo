@@ -12,9 +12,7 @@ export class HomeComponent implements OnInit {
 
   constructor(public dialog: MatDialog, public router: Router) { }
 
-  ngOnInit(): void {
-    this.openDialog("0ms", "0ms")
-  }
+  ngOnInit(): void {}
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     let dialogRef = this.dialog.open(Modal, {

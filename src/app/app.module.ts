@@ -25,7 +25,8 @@ import { DetailsFormComponent } from './send/details-form/details-form.component
 import { SummaryComponent } from './send/summary/summary.component';
 import { PaymentComponent } from './send/payment/payment.component';
 import { FormcontrolPipe } from './pipes/formcontrol.pipe';
-
+import { ListModalComponent } from './shared/list-modal/list-modal.component';
+import {MatListModule} from '@angular/material/list'; 
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormcontrolPipe } from './pipes/formcontrol.pipe';
     SummaryComponent,
     PaymentComponent,
     FormcontrolPipe,
+    ListModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { FormcontrolPipe } from './pipes/formcontrol.pipe';
     MatGridListModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

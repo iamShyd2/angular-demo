@@ -18,3 +18,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 h4, p{
     margin: 0!important;
 }
+
+.list-modal-panel{
+    max-width: 180vw !important;
+    position: absolute !important;
+    height: 100vh !important;
+    right: 0;
+}

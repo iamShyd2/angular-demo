@@ -20,7 +20,6 @@ export class Modal implements OnInit {
   }
   
   sendControl = new FormControl(10);
-  recipientControl = new FormControl(10);
   toBePaid = 10;
   fees = 1;
 
