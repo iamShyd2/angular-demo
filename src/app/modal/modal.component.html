@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-end">
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div class="mt-3">
+    <div>
+        <app-input-select label="Send amount" [inputControl]="sendControl"></app-input-select>
+        <app-input-select label="Recipient gets" [inputControl]="recipientControl"></app-input-select>
+    </div>
+    <app-details-display title="Fees" value="1 USD"></app-details-display>
+    <hr />
+    <app-details-display title="Amount to pay" [value]="toBePaid + ' USD'"></app-details-display>
+    <app-details-display title="Recipient gets" [value]="sendControl.value + ' USD'"></app-details-display>
+</div>
+<button class="button" mat-button (click)="onSubmit()">Send money</button>
