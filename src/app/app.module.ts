@@ -27,6 +27,7 @@ import { PaymentComponent } from './send/payment/payment.component';
 import { FormcontrolPipe } from './pipes/formcontrol.pipe';
 import { ListModalComponent } from './shared/list-modal/list-modal.component';
 import {MatListModule} from '@angular/material/list'; 
+import {MatExpansionModule} from '@angular/material/expansion'; 
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import {MatListModule} from '@angular/material/list';
     MatDatepickerModule,
     MatNativeDateModule,
     MatListModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

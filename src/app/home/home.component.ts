@@ -26,4 +26,6 @@ export class HomeComponent implements OnInit {
 
   }
 
+  arrs =  new Array(3);
+
 }

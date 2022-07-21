@@ -9,6 +9,7 @@
         <app-input-select label="Recipient gets" [inputControl]="sendControl"></app-input-select>
     </div>
     <app-details-display title="Fees" [value]="fees | currency: 'USD'"></app-details-display>
+    <app-details-display title="Transfer time" value="Within Minutes"></app-details-display>
     <hr />
     <app-details-display title="Amount to pay" [value]="toBePaid | currency: 'USD'"></app-details-display>
     <app-details-display title="Recipient gets" [value]="sendControl.value | currency: 'USD'"></app-details-display>
