@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { CountryList } from "../../../countries";
 
 @Component({
   selector: 'app-list-modal',
@@ -13,12 +14,10 @@ export class ListModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  items = [
-    "Ghana",
-  ];
+  items = CountryList;
 
-  onSetItem(item: string){
-    this.matDialogRef.close(item);
+  onSetItem(item: any){
+    this.matDialogRef.close(item.name);
   }
 
 }
