@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class Modal implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<Modal>, private router: Router){}
+  
   ngOnInit(): void {
     this.sendControl.valueChanges.subscribe(val => {
       if(val != null) this.toBePaid = (val * 1) + this.fees;

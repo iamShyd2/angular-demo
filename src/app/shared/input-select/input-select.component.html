@@ -1,7 +1,7 @@
 <div>
-    <mat-form-field appearance="outline">
+    <label>{{ label }}</label>
+    <mat-form-field appearance="outline" class="d-block input">
         <mat-icon matPrefix>attach_money</mat-icon>
-        <mat-label>{{ label }}</mat-label>
         <input matInput [formControl]="inputControl" type="number">
         <div class="d-flex align-items-center ms-2" mat-button (click)="onSelect()">
             {{ value }}

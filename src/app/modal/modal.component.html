@@ -6,6 +6,15 @@
 <div class="mt-3">
     <div>
         <app-input-select label="Send amount" [inputControl]="sendControl"></app-input-select>
+        <div data-v-0c3734d7="" class="d-flex justify-content-center my-1">
+            <span data-v-0c3734d7="" class="send-badge px-4 py-2 text-sm font-bold rounded-primary">
+                <span data-v-0c3734d7="" class="send-badge-text">
+                    1 USD =
+                        1
+                    USD
+                </span>
+            </span>
+        </div>
         <app-input-select label="Recipient gets" [inputControl]="sendControl"></app-input-select>
     </div>
     <app-details-display title="Fees" [value]="fees | currency: 'USD'"></app-details-display>
@@ -14,4 +23,4 @@
     <app-details-display title="Amount to pay" [value]="toBePaid | currency: 'USD'"></app-details-display>
     <app-details-display title="Recipient gets" [value]="sendControl.value | currency: 'USD'"></app-details-display>
 </div>
-<button class="button" mat-flat-button color="primary" (click)="onSubmit()">Send money</button>
+<button class="btn btn-primary w-100 btn-sm" (click)="onSubmit()">Send money</button>
